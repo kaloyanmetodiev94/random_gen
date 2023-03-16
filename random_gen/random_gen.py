@@ -10,9 +10,9 @@ class RandomGen:
 		- values (list): A list of values to choose from.
 		- probabilities (list): A list of probabilities for each value.
 
-        Raises:
-        TypeError: If values or probabilities are not numeric.
-        ValueError: If the sum of probabilities is greater than 1.0.
+		Raises:
+		TypeError: If values or probabilities are not numeric.
+		ValueError: If the sum of probabilities is greater than 1.0.
 
 		"""
 		self._random_nums = random_nums

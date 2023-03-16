@@ -48,19 +48,19 @@ class TestRandomGenMain(unittest.TestCase):
 
 class TestRandomGenEdgeCases(unittest.TestCase):
 	def test_empty_input_lists(self):
-	    # Test that the class raises an error if both input lists are empty
-	    with self.assertRaises(ValueError):
-	        rg = RandomGen([], [])
+		# Test that the class raises an error if both input lists are empty
+		with self.assertRaises(ValueError):
+			rg = RandomGen([], [])
 
 	def test_non_numeric_input_values(self):
-	    # Test that the class raises an error if any input value is non-numeric
-	    with self.assertWarns(Warning):
-	        rg = RandomGen(["a", "b", "c"], [0.3, 0.5, 0.2])
+		# Test that the class raises an error if any input value is non-numeric
+		with self.assertWarns(Warning):
+			rg = RandomGen(["a", "b", "c"], [0.3, 0.5, 0.2])
 
 	def test_non_numeric_probabilities(self):
-	    # Test that the class raises an error if any of the inputted is non-numeric even if it is convertible to numeric
-	    with self.assertRaises(TypeError):
-	        rg = RandomGen([1, 2, 3], [0.3, "0.5", 0.2])
+		# Test that the class raises an error if any of the inputted is non-numeric even if it is convertible to numeric
+		with self.assertRaises(TypeError):
+			rg = RandomGen([1, 2, 3], [0.3, "0.5", 0.2])
 
 if __name__ == '__main__':
 	unittest.main()
