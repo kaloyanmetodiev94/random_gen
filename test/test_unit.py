@@ -1,5 +1,5 @@
 import unittest
-from random_gen import RandomGen
+from random_gen.random_gen import RandomGen
 
 class TestRandomGenMain(unittest.TestCase):
 
@@ -43,7 +43,7 @@ class TestRandomGenMain(unittest.TestCase):
 		rg = RandomGen([1, 2, 3], [0.8, 0.1, 0.1])
 		with self.assertRaises(ValueError):
 			rg._probabilities[0]=0.2 # Intentionally change probability to pass the check in the constructor
-			for _ in range(self._typical_runs): # There is a probability of 60% the next_num() fails with the "adjusted" probabilities and we call it {self._typical_runs} times.
+			for _ in range(self._typical_runs): # Call next_num {self._typical_runs} times with 60% fail chance
 				rg.next_num()
 
 class TestRandomGenEdgeCases(unittest.TestCase):
