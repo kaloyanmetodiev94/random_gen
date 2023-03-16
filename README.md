@@ -15,3 +15,17 @@ The tests use the native unittest python framework
 ```python
 python3 -m unittest
 ```
+
+
+## If you wish to install
+Install using pip
+
+```python
+pip install .
+```
+
+To uninstall
+
+```python
+pip uninstall random_gen
+```

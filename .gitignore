@@ -1,2 +1,4 @@
 **__pycache__**
  *.pyc
+build/*
+random_gen.egg-info/*
